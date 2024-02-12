@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import SideMenu from "@/components/SideMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,8 +30,10 @@ export default function RootLayout({
             </div>
           </div>
         </div>
-        
-        {children}
+        <div className="flex">
+          <SideMenu/>
+          <div className="w-full px-4 pt-8">{children}</div>
+        </div>
       </body>
     </html>
   );
