@@ -5,13 +5,8 @@ import { SearchResult } from "@/app/gallery/page";
 import ImageGrid from "./ImageGrid";
 import { CloudinaryImage } from "./CloudinaryImage";
 
-export default function FavoritesList({
-  initialResources,
-}: {
-  initialResources: SearchResult[];
-}) {
+export default function FavoritesList({initialResources}: {initialResources: SearchResult[]}) {
   const [resources, setResources] = useState(initialResources);
-
   useEffect(() => {
     setResources(initialResources);
   }, [initialResources]);
