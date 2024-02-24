@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Heart from "./heart";
+import Heart from "./Heart";
 import { Button } from "./ui/button";
 
 export default function SideMenu()  {
