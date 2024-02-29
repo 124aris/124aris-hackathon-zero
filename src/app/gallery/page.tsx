@@ -1,4 +1,3 @@
-import { CloudinaryImage } from '@/components/CloudinaryImage';
 import GalleryGrid from '@/components/GalleryGrid';
 import UploadButton from '@/components/UploadButton';
 import cloudinary from "cloudinary";

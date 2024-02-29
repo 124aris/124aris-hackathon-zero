@@ -17,9 +17,11 @@ export default function SideMenu()  {
                                 Gallery
                             </Link>
                         </Button>
-                        <Button variant="ghost" className="w-full justify-start flex gap-2">
-                            <FolderClosed/>
-                            Albums
+                        <Button asChild variant="ghost" className="w-full justify-start flex gap-2">
+                            <Link href='albums'>
+                                <FolderClosed/>
+                                Albums
+                            </Link>
                         </Button>
                         <Button asChild variant="ghost" className="w-full justify-start flex gap-2">
                             <Link href="/favorites">

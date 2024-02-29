@@ -1,7 +1,7 @@
 "use client"
 
 import { CldImage, CldImageProps } from "next-cloudinary"
-import setAsFavoriteAction from "./Actions"
+import { setAsFavoriteAction } from "./Actions"
 import { useState, useTransition } from "react"
 import { SearchResult } from "@/app/gallery/page"
 import ImageMenu from "./ImageMenu"
@@ -39,7 +39,7 @@ export function CloudinaryImage(props: {imageData: SearchResult; onUnheart?: (un
                     className="absolute top-2 left-2 hover:text-red-500 cursor-pointer"
                 />
             }
-            <ImageMenu/>
+            <ImageMenu image={imageData}/>
         </div>
     )
 }
