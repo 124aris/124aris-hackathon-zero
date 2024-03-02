@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react"
+import { Menu, Pencil } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
@@ -9,6 +9,7 @@ import {
 import AddToAlbumDialog from "./AddToAlbumDialog"
 import { SearchResult } from "@/app/gallery/page"
 import { useState } from "react"
+import Link from "next/link"
   
   export default function ImageMenu({image}: {image: SearchResult}) {
     const [open, setOpen] = useState(false);
@@ -22,6 +23,14 @@ import { useState } from "react"
                 <DropdownMenuContent className="w-40">
                     <DropdownMenuItem asChild>
                         <AddToAlbumDialog image={image} onClose={() => setOpen(false)}/>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                        <Button asChild variant='ghost' className="cursor-pointer flex justify-start pl-4">
+                            <Link href={`/edit?publicId=${encodeURIComponent(image.public_id)}`}>
+                                <Pencil className="mr-2 w-4 h-4"/>
+                                Edit
+                            </Link>
+                        </Button>
                     </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
