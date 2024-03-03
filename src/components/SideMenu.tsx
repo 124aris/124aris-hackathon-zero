@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Heart, FolderClosed, Image } from "lucide-react"
+import { Heart, FolderClosed, ImageIcon } from "lucide-react"
 import { Button } from "./ui/button";
 import { Folder } from "@/app/albums/page";
 import cloudinary from 'cloudinary';
@@ -19,7 +19,7 @@ export default async function SideMenu()  {
                     <div className="space-y-1">
                         <Button asChild variant="ghost" className="w-full justify-start flex gap-2">
                             <Link href='/gallery'>
-                                <Image/>
+                                <ImageIcon/>
                                 Gallery
                             </Link>
                         </Button>
