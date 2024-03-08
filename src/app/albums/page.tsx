@@ -1,4 +1,5 @@
 import { AlbumCard } from "@/components/AlbumCard";
+import ForceRefresh from "@/components/ForceRefresh";
 import cloudinary from "cloudinary";
 
 export type Folder = {name: string, path: string}
@@ -10,6 +11,7 @@ export default async function AlbumsPage() {
 
     return(
         <section>
+            <ForceRefresh/>
             <div className="flex flex-col gap-8">
                 <div className='flex justify-between'>
                     <h1 className="text-4xl font-bold">Albums</h1>
