@@ -11,7 +11,7 @@ export default async function FavoritesPage() {
     .max_results(30)
     .execute()) as { resources: SearchResult[] };
 
-  return (
+  return ( 
     <section>
       <ForceRefresh />
       <div className="flex flex-col gap-8">
